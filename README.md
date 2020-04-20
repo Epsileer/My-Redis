@@ -1,57 +1,57 @@
-create a virtual environment to isolate our package dependencies locally
-python -m venv env
+create a virtual environment to isolate our package dependencies locally</br>
+<b>python -m venv env</b>
 
-To activate the environment in windows
-env\Scripts\activate
+To activate the environment in windows</br>
+<b>env\Scripts\activate</b>
 
-Install dependencies
-pip install Django
-pip install sortedcontainers
+Install dependencies</br>
+<b>pip install Django</b>
+<b>pip install sortedcontainers</b>
 
-After sussessful installation of Django you get a new command django-admin
+After sussessful installation of Django you get a new command django-admin</br>
 
-django-admin startproject redis
+<b>django-admin startproject redis</b>
 
-to create an app
-django-admin startapp myapp
+to create an app</br>
+<b>django-admin startapp myapp</b>
 
-The four files we care about are
-redis/setting.py
-redis/urls.py
-redis/myapp/views.py
-redis/myapp/models.py 
+The four files we care about are</br>
+redis/setting.py</br>
+redis/urls.py</br>
+redis/myapp/views.py</br>
+redis/myapp/models.py</br> 
 
-In setting.py add an app you just created in INSTALLED_APPS
-INSTALLED_APPS = [
-    .....
-    'myapp'
-]
+In setting.py add an app you just created in INSTALLED_APPS</br>
+INSTALLED_APPS = [</br>
+    .....</br>
+    'myapp'</br>
+]</br>
 
-Copy and paste the code from redis/myapp/models.py.
-we want to convert these models into sql tables and to do so while changing models run migrations.
+Copy and paste the code from redis/myapp/models.py.</br>
+we want to convert these models into sql tables and to do so while changing models run migrations.</br>
 
-python manage.py makemigrations
-python manage.py makemigrations myapp
-pythn manage.py migrate
-
-
-Create two new files redis/myapp/singleton.py and redis/myapp/zsingleton.py.
-
-Now copy and paste each files code...
-redis/urls.py
-redis/myapp/singleton.py
-redis/myapp/zsingleton.py
-redis/myapp/views.py
-
-To run the server
-python manage.py runserver
+<b>python manage.py makemigrations</b></br>
+<b>python manage.py makemigrations myapp</b></br>
+<b>python manage.py migrate</b></br>
 
 
-Now to check the running project install 'Postman' and hit different urls like..
+Create two new files redis/myapp/singleton.py and redis/myapp/zsingleton.py.</br>
 
-https://localhost:8000/get/key
-https://localhost:8000/set
-https://localhost:8000/key/ttl
-https://localhost:8000/zadd
-https://localhost:8000/zrank/key/value
-https://localhost:8000/zrange/l/r
+Now copy and paste each files code...</br>
+<b>redis/urls.py</b></br>
+<b>redis/myapp/singleton.py</b></br>
+<b>redis/myapp/zsingleton.py</b></br>
+<b>redis/myapp/views.py</b></br>
+
+To run the server</br>
+<b>python manage.py runserver</b></br>
+
+
+Now to check the running project install 'Postman' and hit different urls like..</br>
+
+<b>https://localhost:8000/get/key</b></br>
+<b>https://localhost:8000/set</b></br>
+<b>https://localhost:8000/key/ttl</b></br>
+<b>https://localhost:8000/zadd</b></br>
+<b>https://localhost:8000/zrank/key/value</b></br>
+<b>https://localhost:8000/zrange/l/r</b></br>
