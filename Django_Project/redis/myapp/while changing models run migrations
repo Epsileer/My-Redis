@@ -1,0 +1,5 @@
+while changing models run migrations
+
+python manage.py makemigrations
+python manage.py makemigrations myapp
+pythn manage.py migrate
