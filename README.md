@@ -19,7 +19,7 @@ The four files we care about are
 redis/setting.py
 redis/urls.py
 redis/myapp/views.py
-redis/myapp/models.py
+redis/myapp/models.py 
 
 In setting.py add an app you just created in INSTALLED_APPS
 INSTALLED_APPS = [
